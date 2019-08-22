@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/menu_feed"
+        android:icon="@drawable/ic_dashboard_white"
+        android:title="@string/feed" />
+    <item
+        android:id="@+id/menu_search"
+        android:icon="@drawable/ic_search_white"
+        android:title="@string/search" />
+    <item
+        android:id="@+id/menu_projects"
+        android:icon="@drawable/ic_projects_white"
+        android:title="@string/projects" />
+
+    <item
+        android:id="@+id/menu_invites"
+        android:icon="@drawable/ic_notifications_white"
+        android:title="@string/notifications"/>
+
+    <item
+        android:id="@+id/menu_config"
+        android:icon="@drawable/ic_format_list_white"
+        android:title="@string/configurations"/>
+
+</menu>
