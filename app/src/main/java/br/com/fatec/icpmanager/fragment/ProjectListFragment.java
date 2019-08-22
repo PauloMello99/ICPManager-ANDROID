@@ -9,18 +9,21 @@ import android.view.ViewGroup;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.airbnb.lottie.LottieAnimationView;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 
 import br.com.fatec.icpmanager.R;
 import br.com.fatec.icpmanager.adapter.ProjectAdapter;
 import br.com.fatec.icpmanager.listener.DataLoadListener;
+import br.com.fatec.icpmanager.listener.NotificationListener;
 import br.com.fatec.icpmanager.model.Project;
 
 public class ProjectListFragment extends Fragment implements DataLoadListener<Project> {

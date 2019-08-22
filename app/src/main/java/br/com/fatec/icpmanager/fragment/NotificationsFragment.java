@@ -10,6 +10,7 @@ import android.view.ViewGroup;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
@@ -19,6 +20,7 @@ import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.ValueEventListener;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -48,6 +50,8 @@ public class NotificationsFragment extends Fragment implements RecyclerViewClick
     private UserDAO userDAO;
     private ProjectDAO projectDAO;
     private int readCount;
+
+    public NotificationsFragment(){ }
 
     public NotificationsFragment(int type, Context context, NotificationListener listener) {
         this.context = context;
