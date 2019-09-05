@@ -31,14 +31,11 @@ public class ProjectActivity extends AppCompatActivity {
     ProgressBar progressBar;
     StepView stepView;
 
-    private int currentStep = 0;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_project);
         setComponents();
-        stepAction();
     }
 
 
@@ -84,34 +81,7 @@ public class ProjectActivity extends AppCompatActivity {
         });
     }
 
-    private void stepAction(){
 
-        //FIXME ANIMAÇÃO DO STEP ESTÁ MUITO LENTA (PODE SER O EMULADOR)
-        //TODO ADICIONAR TEXTO UNICO PARA CADA FASE
-        stepView.setOnStepClickListener(step -> Toast.makeText(ProjectActivity.this, "Step " + step, Toast.LENGTH_SHORT).show());
-        findViewById(R.id.next).setOnClickListener(v -> {
-            if (currentStep < stepView.getStepCount() - 1) {
-                currentStep++;
-                stepView.go(currentStep, true);
-            } else {
-                stepView.done(true);
-            }
-        });
-        findViewById(R.id.back).setOnClickListener(v -> {
-            if (currentStep > 0) {
-                currentStep--;
-            }
-            stepView.done(false);
-            stepView.go(currentStep, true);
-        });
-        List<String> steps = new ArrayList<>();
-        for (int i = 0; i < 5; i++) {
-            steps.add("Step " + (i + 1));
-        }
-        steps.set(steps.size() - 1, steps.get(steps.size() - 1) + " last one");
-        stepView.setSteps(steps);
-
-    }
 
     @Override
     public boolean onSupportNavigateUp() {

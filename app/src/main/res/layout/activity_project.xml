@@ -109,14 +109,7 @@
         app:layout_constraintTop_toBottomOf="@+id/start_date_project" />
 
 
-    <include
-        android:id="@+id/step_layout"
-        layout="@layout/step_layout"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="84dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/progress_project" />
+
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -130,7 +123,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/step_layout">
+        app:layout_constraintTop_toBottomOf="@+id/progress_project">
 
         <androidx.cardview.widget.CardView
             android:id="@+id/students_project"
