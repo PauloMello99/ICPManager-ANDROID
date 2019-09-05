@@ -108,19 +108,8 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/start_date_project" />
 
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/recycler_phases_project"
-        android:layout_width="match_parent"
-        android:layout_height="150dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginLeft="8dp"
-        android:layout_marginTop="52dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginRight="8dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/progress_project" />
+
+
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -134,7 +123,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/recycler_phases_project">
+        app:layout_constraintTop_toBottomOf="@+id/progress_project">
 
         <androidx.cardview.widget.CardView
             android:id="@+id/students_project"

@@ -129,6 +129,8 @@
             android:configChanges="keyboardHidden|orientation|screenSize"
             android:windowSoftInputMode="adjustPan"
             android:screenOrientation="portrait" />
+        <activity android:name=".activity.StepViewActivity"
+            android:screenOrientation="portrait"/>
 
         <service
             android:name=".utils.FirebaseService"

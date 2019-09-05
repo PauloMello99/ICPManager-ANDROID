@@ -1,20 +1,22 @@
 package br.com.fatec.icpmanager.activity;
 
-import androidx.annotation.NonNull;
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.os.Bundle;
 import android.util.Log;
-import android.view.View;
-import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
+
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.ValueEventListener;
+import com.shuhart.stepview.StepView;
+
+import java.util.ArrayList;
+import java.util.List;
 
 import br.com.fatec.icpmanager.R;
 import br.com.fatec.icpmanager.model.Project;
@@ -27,6 +29,7 @@ public class ProjectActivity extends AppCompatActivity {
     TextView startTextView;
     TextView endTextView;
     ProgressBar progressBar;
+    StepView stepView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,6 +37,7 @@ public class ProjectActivity extends AppCompatActivity {
         setContentView(R.layout.activity_project);
         setComponents();
     }
+
 
     private void setComponents() {
         getProject();
@@ -46,6 +50,7 @@ public class ProjectActivity extends AppCompatActivity {
         startTextView = findViewById(R.id.start_date_project);
         endTextView = findViewById(R.id.end_date_project);
         progressBar = findViewById(R.id.progress_project);
+        stepView = findViewById(R.id.step_view);
     }
 
     private void getProject() {
@@ -75,6 +80,8 @@ public class ProjectActivity extends AppCompatActivity {
             }
         });
     }
+
+
 
     @Override
     public boolean onSupportNavigateUp() {
